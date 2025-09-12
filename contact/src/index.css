@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS3 animations for social icons */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Modal animation */
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+/* Enhanced social icon styles */
+.social-icon-enhanced {
+  position: relative;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.social-icon-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #00B8F1, #FFD600, #FF2A58);
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.social-icon-enhanced:hover::before {
+  opacity: 1;
+}
+
+.social-icon-enhanced:hover {
+  transform: scale(1.1) rotate(5deg);
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(0, 184, 241, 0.3);
+}
+
+.social-icon-enhanced:active {
+  transform: scale(0.95);
+}
+
+/* Staggered animation for multiple icons */
+.social-icons-container .social-icon-enhanced:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.social-icons-container .social-icon-enhanced:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.social-icons-container .social-icon-enhanced:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.social-icons-container .social-icon-enhanced:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Hover effect for containers */
+.social-icons-container:hover .social-icon-enhanced:not(:hover) {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+main {background: #FAF9F6;}
+
+.footer-logo{
+  /* brandmark */
+width: 772.78px;
+height: 380.67px;
+left: 139.8px;
+top: 1905.21px;
+
+
+}
+
+
+.brandmark{max-width:777px}
+
+hr{     border-top-width: 2px;}
+
+.socials{margin-top:-30px}
+.gap-x-12{column-gap: 6em;}

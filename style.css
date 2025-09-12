@@ -1,0 +1,475 @@
+
+/* CSS for section section:header */
+html {
+  scroll-behavior: smooth;
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 18px 83px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+.logo {
+    width: 160px;
+    height: 30px;
+}
+.left-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 65px;
+    height: 100vh;
+    background-image: url('images/142c20a474b724845e334d986446dfd4d5e53f24.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 200;
+}
+@media (max-width: 768px) {
+    .left-bar {
+        display: none;
+    }
+    .site-header {
+        padding: 18px 20px;
+    }
+}
+
+/* CSS for section section:hero */
+.hero-section {
+    height: 870px;
+    background-color: var(--color-background-alt);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-top: 74px;
+}
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 651px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-play-button {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 84px;
+    height: 60px;
+}
+.hero-tagline {
+    margin-top: 34px; /* 759 - (74 + 651) */
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    color: var(--color-text-primary);
+}
+
+/* CSS for section section:stories */
+.stories-intro-panel {
+    flex-shrink: 0;
+    width: 940px;
+    padding-left: 210px;
+    padding-top: 163px; /* 1033 - 870 */
+}
+.stories-image-panel {
+    flex-shrink: 0;
+    position: relative;
+    width: 2022px;
+    height: 100%;
+}
+.stories-image {
+    position: absolute;
+    top: 1.38px;
+    left: 0;
+    width: 1987px;
+    height: 860px;
+}
+.stories-text-group {
+    position: absolute;
+    top: 294px; /* 1164 - 870 */
+    left: 1049px; /* 1989 - 940 */
+    width: 907px;
+    text-align: center;
+    color: var(--color-text-light);
+}
+.onechild-logo-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 54px; /* 1164 - (910+100) */
+}
+.onechild-logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.stories-heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 80px;
+    margin: 0 0 33px;
+}
+.stories-paragraph {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 300;
+    max-width: 907px;
+    margin: 0 auto;
+}
+.stories-image-panel-2 {
+    flex-shrink: 0;
+    position: relative;
+    width: 1447px;
+    height: 100%;
+}
+.stories-image-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 726px;
+}
+.stories-caption-2 {
+    position: absolute;
+    bottom: 24px; /* 1616 - (870+726) is negative, so place at bottom */
+    left: 723px; /* 3650 - 2927 */
+    color: var(--color-text-primary);
+    font-size: 18px;
+    line-height: 20px;
+}
+.stories-video-panel {
+    flex-shrink: 0;
+    position: relative;
+    width: 862px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 454px; /* 4818 - (2927+1447) */
+    padding-top: 146px; /* 1016-870 */
+}
+.stories-video-bg {
+    width: 862px;
+    height: 436px;
+}
+.stories-play-button {
+    position: absolute;
+    top: 333px; /* 1203-870 */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.stories-caption-video {
+    margin-top: 17px; /* 1469 - (1016+436) */
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* CSS for section section:unathi */
+.unathi-intro-panel {
+    flex-shrink: 0;
+    width: 1579px;
+    padding-left: 893px;
+    padding-top: 145px; /* 1885-1740 */
+}
+.unathi-paragraph {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 300;
+    max-width: 417px;
+    margin-top: 18px;
+}
+.unathi-video-panel {
+    flex-shrink: 0;
+    position: relative;
+    width: 1150px;
+    height: 580px;
+    margin-top: 145px; /* 1885-1740 */
+}
+.unathi-video-bg {
+    width: 100%;
+    height: 100%;
+}
+.unathi-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.unathi-text-panel {
+    flex-shrink: 0;
+    width: 576px; /* 3744 - (1579+1150) + 446 */
+    padding-left: 425px; /* 3168 - (1579+1150) */
+    padding-top: 144px; /* 1884-1740 */
+    max-width: 446px;
+}
+.unathi-image-panel {
+    flex-shrink: 0;
+    position: relative;
+    width: 576px;
+    height: 100%;
+    margin-left: 0; /* 3744 is start */
+}
+.unathi-image-1 {
+    position: absolute;
+    top: 144px; /* 1884-1740 */
+    left: 0;
+    width: 576px;
+    height: 290px;
+}
+.unathi-image-2 {
+    position: absolute;
+    top: 434px; /* 2174-1740 */
+    left: -576px; /* 3168-3744 */
+    width: 575.5px;
+    height: 290px;
+}
+.unathi-caption-1 {
+    position: absolute;
+    top: 467px; /* 2207-1740 */
+    left: 228px; /* 3972-3744 */
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+}
+
+/* CSS for section section:impact */
+.impact-intro-panel {
+    flex-shrink: 0;
+    width: 1578px;
+    padding-left: 163px;
+    padding-top: 142px; /* 2752-2610 */
+}
+.impact-intro-panel .section-title {
+    max-width: 730px;
+}
+.impact-story-panel {
+    flex-shrink: 0;
+    width: 420px;
+    padding-top: 68px; /* 2678-2610 */
+    max-width: 396px;
+}
+.impact-asterix-card {
+    background-color: var(--color-background-alt);
+    width: 420px;
+    height: 150px;
+    margin-top: 25px; /* 3255 - (2678+252) */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4px;
+}
+.impact-illustration-panel {
+    flex-shrink: 0;
+    width: 1208px; /* 3831 - (1578+420+625) is wrong, let's use element width */
+    position: relative;
+    margin-left: 625px; /* 2623 - (1578+420) */
+    padding-top: 118px; /* 2728-2610 */
+}
+.illustration-container {
+    position: relative;
+    width: 527px;
+    height: 517px;
+}
+.impact-stats-panel {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 646px; /* 3256-2610 */
+    margin-left: 1059px; /* 2890 - (2079+811) is complex, let's simplify */
+    gap: 20px;
+}
+.impact-card {
+    width: 420px;
+    height: 150px;
+    background-color: var(--color-background-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.impact-card-text {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* CSS for section section:cta */
+.cta-section {
+    position: relative;
+    height: 1739px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 163px;
+    padding-top: 1008px; /* 4488 - 3480 */
+}
+.cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+.cta-title {
+    font-family: var(--font-heading);
+    font-weight: 100;
+    font-size: 80px;
+    line-height: 80px;
+    color: var(--color-text-light);
+    width: 358px;
+    margin: 0 0 106px; /* 4837 - (4488+243) */
+}
+.cta-button {
+    color: var(--color-text-primary);
+}
+
+/* CSS for section section:footer */
+.site-footer {
+    position: relative;
+    height: 870px;
+    padding: 155px 80px 0; /* 5375-5220 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/ace68c3fd64b5d7e271604a76033557b5598f462.png');
+    background-size: cover;
+    z-index: -1;
+}
+.footer-container {
+    width: 100%;
+    max-width: 1274px; /* 1440 - 83*2 approx */
+}
+.footer-logo-container {
+    position: relative;
+    height: 355px;
+    margin-bottom: 38px; /* 5768 - (5375+355) */
+}
+.footer-logo {
+    position: relative;
+    width: 710px;
+    height: 355px;
+}
+.footer-divider {
+    border: none;
+    height: 3px;
+    background-color: var(--color-text-primary);
+    margin: 0;
+}
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0; /* 5782-5768 */
+}
+.footer-nav {
+    display: flex;
+    gap: 108px;
+}
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.footer-social {
+    display: flex;
+    gap: 14px;
+}
+.footer-divider-vertical {
+    width: 3px;
+    height: 24px;
+    background-color: var(--color-text-primary);
+}
+.copyright {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+.footer-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 163px; /* 5931 - 5768 */
+}
+.footer-subscribe p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    margin: 0;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-text-primary);
+    padding-bottom: 5px;
+}
+.subscribe-form input {
+    border: none;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 16px;
+    width: 239px;
+}
+.subscribe-form input:focus {
+    outline: none;
+}
+.subscribe-form button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer-social {float:right}
