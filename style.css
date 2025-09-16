@@ -47,19 +47,18 @@ html {
 
 /* CSS for section section:hero */
 .hero-section {
-    height: 870px;
+    height: 100vh;
     background-color: var(--color-background-alt);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    padding-top: 74px;
+    position: relative; 
 }
 .hero-video-container {
     position: relative;
     width: 100%;
-    height: 651px;
+    height: calc(100vh - 150px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,19 +78,36 @@ html {
     height: 60px;
 }
 .hero-tagline {
-    margin-top: 34px; /* 759 - (74 + 651) */
+    margin-top: 34px;
     font-size: 18px;
     line-height: 20px;
     font-weight: 300;
     color: var(--color-text-primary);
+    position: absolute;
+    bottom: 40px;
 }
 
 /* CSS for section section:stories */
+.scroll-section {
+     
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+}
+.scroll-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
 .stories-intro-panel {
     flex-shrink: 0;
     width: 940px;
     padding-left: 210px;
-    padding-top: 163px; /* 1033 - 870 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 .stories-image-panel {
     flex-shrink: 0;
@@ -103,12 +119,11 @@ html {
     position: absolute;
     top: 1.38px;
     left: 0;
-    width: 1987px;
-    height: 860px;
+    
 }
 .stories-text-group {
     position: absolute;
-    top: 294px; /* 1164 - 870 */
+    top: 200px; /* 1164 - 870 */
     left: 1049px; /* 1989 - 940 */
     width: 907px;
     text-align: center;
@@ -155,27 +170,32 @@ html {
 }
 .stories-caption-2 {
     position: absolute;
-    bottom: 24px; /* 1616 - (870+726) is negative, so place at bottom */
+    bottom: 35px; /* 1616 - (870+726) is negative, so place at bottom */
     left: 723px; /* 3650 - 2927 */
     color: var(--color-text-primary);
     font-size: 18px;
-    line-height: 20px;
+    
 }
 .stories-video-panel {
     flex-shrink: 0;
     position: relative;
-    width: 862px;
+    
     height: 100%;
-    display: flex;
+    
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 454px; /* 4818 - (2927+1447) */
-    padding-top: 146px; /* 1016-870 */
+   
+    margin-left: 60px; /* 4818 - (2927+1447) */
+    
 }
+
+#unathi {
+    background-image: url(img/meet-unathi.jpg);
+    background-size: cover;
+}
+
 .stories-video-bg {
-    width: 862px;
-    height: 436px;
+    
+    height: 100%;
 }
 .stories-play-button {
     position: absolute;
@@ -196,20 +216,20 @@ html {
     width: 1579px;
     padding-left: 893px;
     padding-top: 145px; /* 1885-1740 */
+    height: 100%;
 }
 .unathi-paragraph {
     font-size: 32px;
     line-height: 42px;
     font-weight: 300;
     max-width: 417px;
-    margin-top: 18px;
+   
 }
 .unathi-video-panel {
     flex-shrink: 0;
     position: relative;
-    width: 1150px;
-    height: 580px;
-    margin-top: 145px; /* 1885-1740 */
+    max-width:80%;
+    height: 100%; 
 }
 .unathi-video-bg {
     width: 100%;
@@ -248,7 +268,7 @@ html {
 .unathi-image-2 {
     position: absolute;
     top: 434px; /* 2174-1740 */
-    left: -576px; /* 3168-3744 */
+  
     width: 575.5px;
     height: 290px;
 }
@@ -473,3 +493,193 @@ html {
 }
 
 .footer-social {float:right}
+
+/* Scroll snap container */
+    .scroll-snap-container {
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+    
+    
+    
+    /* Navigation dots */
+    .nav-dots {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .dot.active {
+      background: white;
+      transform: scale(1.4);
+    }
+    
+    /* Scroll hint animation */
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-size: 0.9rem;
+      z-index: 100;
+    }
+    
+    .scroll-hint span {
+      margin-bottom: 10px;
+    }
+    
+    .scroll-hint::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(45deg);
+      animation: scrollHint 1.5s infinite;
+    }
+    
+    @keyframes scrollHint {
+      0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+    }
+
+
+  
+
+/* Responsive adjustments */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      
+      .stories-intro-panel {
+        flex: 0 0 auto;
+        margin-bottom: 40px;
+      }
+      
+      .nav-dots {
+        right: 10px;
+      }
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  
+     .scroll-snap-container {
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+
+
+       .nav-dots {
+        right: 10px;
+      }
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+
+/* Navigation dots */
+    .nav-dots {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(251, 0, 0, 0.6);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .dot.active {
+      background: rgb(245, 237, 0);
+      transform: scale(1.4);
+    }
+    
+    /* Scroll hint animation */
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-size: 0.9rem;
+      z-index: 100;
+    }
+    
+    .scroll-hint span {
+      margin-bottom: 10px;
+    }
+    
+    .scroll-hint::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(45deg);
+      animation: scrollHint 1.5s infinite;
+    }
+    
+    @keyframes scrollHint {
+      0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+    }
+      
+    

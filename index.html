@@ -15,38 +15,49 @@
   <style id="sections-styles">
   </style>
   <script src="global.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 <header class="site-header">
     <div class="header-container">
         <a href="#hero" class="logo-link">
-            <img src="images/19_51.svg" alt="OneChild Logo" class="logo">
+            <img src="img/19_51.svg" alt="OneChild Logo" class="logo">
         </a>
     </div>
 </header>
 <aside class="left-bar"></aside>
-<section id="hero" class="hero-section">
+
+ <div class="nav-dots">
+      <div class="dot active" data-target="hero"></div>
+      <div class="dot" data-target="stories"></div>
+      <div class="dot" data-target="unathi"></div>
+      <div class="dot" data-target="impact"></div>
+      <div class="dot" data-target="cta"></div>
+      <div class="dot" data-target="footer"></div>
+    </div>
+    
+<section id="hero" class="hero-section h-screen">
     <div class="hero-video-container">
-        <img src="images/19_44.svg" alt="Hero video background" class="hero-video-bg">
+        <img src="img/19_44.svg" alt="Hero video background" class="hero-video-bg">
         <button class="hero-play-button">
-            <img src="images/19_47.svg" alt="Play video">
+            <img src="img/19_47.svg" alt="Play video">
         </button>
     </div>
-    <p class="hero-tagline">One child—Many stories.</p>
+    <p class="hero-tagline">One child — Many stories.</p>
 </section>
-<section id="stories" class="scroll-section">
+<section id="stories" class="scroll-section h-screen">
     <div class="scroll-content" style="width: 8687px;">
         <div class="stories-intro-panel">
-            <h2 class="section-title">Unathi’s <br /> & <br>So Many <br>Other’s <br>SStories</h2>
+            <h2 class="section-title">Unathi’s <br /> & <br>So Many <br>Other’s <br>Stories</h2>
         </div>
         <div class="stories-image-panel">
-            <img src="images/c82b0fc439897c2c56a2e0d63ffcc5a6dce32fe9.png" alt="Portrait of Unathi looking up" class="stories-image">
+            <img src="img/unathi.jpg" alt="Portrait of Unathi looking up" class="stories-image">
             <div class="stories-text-group">
                 <div class="onechild-logo-container">
                     <!--merged image-->
                     <div class="onechild-logo">
-                        <img src="images/31_53.svg" alt="OneChild logo part 1" style="position: absolute; top: 111.43px; left: 0px; width: 400px; height: 88.57px;">
-                        <img src="images/31_74.svg" alt="OneChild logo part 2" style="position: absolute; top: 0px; left: 55.33px; width: 85.8px; height: 119.67px;">
+                        <img src="img/31_53.svg" alt="OneChild logo part 1" style="position: absolute; top: 111.43px; left: 0px; width: 400px; height: 88.57px;">
+                        <img src="img/31_74.svg" alt="OneChild logo part 2" style="position: absolute; top: 0px; left: 55.33px; width: 85.8px; height: 119.67px;">
                     </div>
                 </div>
                 <h3 class="stories-heading">Hope Begins with One</h3>
@@ -54,69 +65,85 @@
             </div>
         </div>
         <div class="stories-image-panel-2">
-            <img src="images/0bd33917e2ab2c123cd9f3a942fe0804af1ac9aa.png" alt="Child in a community" class="stories-image-2">
+            <img src="img/0bd33917e2ab2c123cd9f3a942fe0804af1ac9aa.png" alt="Child in a community" class="stories-image-2">
             <p class="stories-caption-2">Not just one child</p>
         </div>
-        <div class="stories-video-panel">
-             <img src="images/31_45.svg" alt="Video placeholder" class="stories-video-bg">
+        <div class="stories-video-panel text-center">
+             <img src="img/31_45.svg" alt="Video placeholder" class="stories-video-bg">
              <button class="stories-play-button">
-                <img src="images/31_48.svg" alt="Play video">
+                <img src="img/31_48.svg" alt="Play video">
              </button>
              <p class="stories-caption-video">When one child becomes the voice of many.</p>
         </div>
          <div class="stories-video-panel">
-             <img src="images/31_45.svg" alt="Video placeholder" class="stories-video-bg">
-             <button class="stories-play-button">
-                <img src="images/31_48.svg" alt="Play video">
-             </button>
-             <p class="stories-caption-video">When one child the voice of many.</p>
+             <img src="img/kids.png" alt="Video placeholder" class="stories-video-bg">
+            
+            
+        </div>
+         <div class="stories-video-panel">
+             <img src="child-sitting.webp" alt="kid sitting down" class="stories-video-bg">
+            
+            
+        </div>
+         <div class="stories-video-panel">
+            <p class="unathi-paragraph mt-50 mr-30">“I am only one, but still I am one. I cannot do everything, but still I can do something; and because I cannot do everything, I will not refuse to do something that I can do.”</p>
+            <br /> <br />
+            <p>— Helen Keller</p>
+
+            
         </div>
     </div>
 </section>
-<section id="unathi" class="scroll-section">
-    <div class="scroll-content" style="width: 10080px;">
-        <div class="unathi-intro-panel">
+<section  class="scroll-section h-screen">
+    <div  class="scroll-content" style="width: 10080px;">
+        <div id="unathi" class="unathi-intro-panel">
             <h2 class="section-title">Meet Unathi</h2>
             <p class="unathi-paragraph">A child who makes you smile without even trying. He loves running around barefoot, drawing with broken crayons, and asking many many questions.</p>
         </div>
         <div class="unathi-video-panel">
-            <img src="images/31_113.svg" alt="Video of Unathi" class="unathi-video-bg">
+            <img src="img/31_113.svg" alt="Video of Unathi" class="unathi-video-bg">
             <button class="unathi-play-button">
-                <img src="images/31_115.svg" alt="Play video">
+                <img src="img/31_115.svg" alt="Play video">
             </button>
         </div>
         <div class="unathi-text-panel">
             <p class="text-light">Unathi comes from a place where things aren’t always easy. There are days when food runs low and grown-ups have to make tough choices. But what’s interesting is Unathi isn’t defined by that. What stands out about him isn’t what he lacks—it’s everything he is.</p>
         </div>
         <div class="unathi-image-panel">
-            <img src="images/a8edbf44508baad7272e7fbb41242b24fb910093.png" alt="Child smiling" class="unathi-image-1">
-            <img src="images/e13de01a66d5c3161d2e628c20e5bef91ec8b742.png" alt="Child playing" class="unathi-image-2">
+            <img src="img/a8edbf44508baad7272e7fbb41242b24fb910093.png" alt="Child smiling" class="unathi-image-1">
+            <img src="img/e13de01a66d5c3161d2e628c20e5bef91ec8b742.png" alt="Child playing" class="unathi-image-2">
             <p class="unathi-caption-1">Unforgettable — a face full of hope and joy.</p>
         </div>
     </div>
 </section>
-<section id="impact" class="scroll-section">
+<section id="impact" class="scroll-section h-screen">
     <div class="scroll-content" style="width: 10080px;">
         <div class="impact-intro-panel">
-            <h2 class="section-title">OneChild, through Holanathi, delivers real impact across South African communities</h2>
+         
+    <h2 class="section-title">OneChild, through Holanathi, delivers real impact across South African communities</h2>
+        
+           
+          
+            <img src="img/sec04.svg" />
+  
         </div>
         <div class="impact-story-panel">
             <p class="text-light-bold">From one child to many, Holanathi fuels change — nourishing young lives and uplifting entire communities with every meal.</p>
             <p class="text-light">Without this life-sustaining work, countless children would face a losing battle against these odds. Circumstances no child should ever know.</p>
             <div class="impact-asterix-card">
-                <img src="images/I60_167_38_98.svg" alt="Asterix symbol">
+                <img src="img/I60_167_38_98.svg" alt="Asterix symbol">
             </div>
         </div>
         <div class="impact-illustration-panel">
             <!--merged image-->
             <div class="illustration-container">
-                <img src="images/38_26.svg" alt="Illustration element" style="position: absolute; top: 342.28px; left: 13.27px;">
-                <img src="images/38_27.svg" alt="Illustration element" style="position: absolute; top: 228.89px; left: 42.54px;">
-                <img src="images/38_29.svg" alt="Illustration element" style="position: absolute; top: 298.83px; left: 60.53px;">
-                <img src="images/38_32.svg" alt="Illustration element" style="position: absolute; top: 100.88px; left: 123.68px;">
-                <img src="images/38_34.svg" alt="Illustration element" style="position: absolute; top: 106.16px; left: 123.87px;">
-                <img src="images/38_36.svg" alt="Illustration element" style="position: absolute; top: 114.13px; left: 265.25px;">
-                <img src="images/38_100.svg" alt="Illustration element" style="position: absolute; top: 0px; left: 0px;">
+                <img src="img/38_26.svg" alt="Illustration element" style="position: absolute; top: 342.28px; left: 13.27px;">
+                <img src="img/38_27.svg" alt="Illustration element" style="position: absolute; top: 228.89px; left: 42.54px;">
+                <img src="img/38_29.svg" alt="Illustration element" style="position: absolute; top: 298.83px; left: 60.53px;">
+                <img src="img/38_32.svg" alt="Illustration element" style="position: absolute; top: 100.88px; left: 123.68px;">
+                <img src="img/38_34.svg" alt="Illustration element" style="position: absolute; top: 106.16px; left: 123.87px;">
+                <img src="img/38_36.svg" alt="Illustration element" style="position: absolute; top: 114.13px; left: 265.25px;">
+                <img src="img/38_100.svg" alt="Illustration element" style="position: absolute; top: 0px; left: 0px;">
             </div>
         </div>
         <div class="impact-stats-panel">
@@ -138,12 +165,12 @@
         </div>
     </div>
 </section>
-<section id="cta" class="cta-section">
-    <img src="images/869752c1d15fb39add2678ebf5676d6bb06f619c.png" alt="A child smiling" class="cta-background">
+<section id="cta" class="cta-section h-screen">
+    <img src="img/869752c1d15fb39add2678ebf5676d6bb06f619c.png" alt="A child smiling" class="cta-background">
     <div class="cta-content">
         <h2 class="cta-title">You can get involved?</h2>
         <a href="#" class="button cta-button">
-            <img src="images/6f97a185cccb0268c25bba5dc58c17f87da2c3de.png" alt="" class="button-bg">
+            <img src="img/6f97a185cccb0268c25bba5dc58c17f87da2c3de.png" alt="" class="button-bg">
             See how
         </a>
     </div>
@@ -154,14 +181,14 @@
         <div class="footer-logo-container">
             <!--merged image-->
             <div class="footer-logo">
-                <img src="images/99_361.svg" alt="OneChild by Holanathi" style="position: absolute; top: 197.8px; left: 0px; width: 710px; height: 157.2px;">
-                <img src="images/99_382.svg" alt="OneChild brandmark" style="position: absolute; top: 0px; left: 98.2px; width: 152.27px; height: 212.39px;">
+                <img src="img/99_361.svg" alt="OneChild by Holanathi" style="position: absolute; top: 197.8px; left: 0px; width: 710px; height: 157.2px;">
+                <img src="img/99_382.svg" alt="OneChild brandmark" style="position: absolute; top: 0px; left: 98.2px; width: 152.27px; height: 212.39px;">
             </div>
             <div class="footer-social">
-                    <a href="#"><img src="images/99_414.svg" alt="Social Icon"></a>
-                    <a href="#"><img src="images/99_391.svg" alt="Social Icon"></a>
-                    <a href="#"><img src="images/99_409.svg" alt="Social Icon"></a>
-                    <a href="#"><img src="images/99_397.svg" alt="Social Icon"></a>
+                    <a href="#"><img src="img/99_414.svg" alt="Social Icon"></a>
+                    <a href="#"><img src="img/99_391.svg" alt="Social Icon"></a>
+                    <a href="#"><img src="img/99_409.svg" alt="Social Icon"></a>
+                    <a href="#"><img src="img/99_397.svg" alt="Social Icon"></a>
                 </div>
         </div>
         <hr class="footer-divider">
@@ -190,6 +217,87 @@
     </div>
 </footer>
 
-@block-end footer
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.scroll-snap-container');
+      const sections = document.querySelectorAll('.scroll-section, .hero-section, .cta-section, .site-footer');
+      const dots = document.querySelectorAll('.dot');
+      
+      // Set up Intersection Observer to detect which section is in view
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Update active dot
+            const index = Array.from(sections).indexOf(entry.target);
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (dots[index]) {
+              dots[index].classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+      
+      // Add click events to dots for navigation
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+      
+      // Handle scroll events for automatic section snapping
+      let isScrolling = false;
+      
+      container.addEventListener('scroll', function() {
+        // Clear our timeout throughout the scroll
+        window.clearTimeout(isScrolling);
+        
+        // Set a timeout to run after scrolling finishes
+        isScrolling = setTimeout(function() {
+          // Find which section is most in view
+          let closestSection = null;
+          let closestDistance = Infinity;
+          
+          sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+            
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestSection = section;
+            }
+          });
+          
+          // Smoothly scroll to the closest section
+          if (closestSection) {
+            closestSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      });
+      
+      // Update header background on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 50) {
+          header.style.background = 'rgba(0, 0, 0, 0.7)';
+        } else {
+          header.style.background = 'transparent';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
